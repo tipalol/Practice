@@ -6,7 +6,9 @@ namespace Eighth
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Введите кол-во вершин");
+            int n = Convert.ToInt32(Console.ReadLine());
+
         }
     }
 }
