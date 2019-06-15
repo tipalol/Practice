@@ -13,10 +13,17 @@ namespace Fourth
             double b = 1.5d;
             double c;
 
-            Console.WriteLine("Введите необходимую точность");
-            double epsilon = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите необходимую точность (например 0,0001)");
+            double epsilon = 0.0001;
+            try
+            {
+                epsilon = Convert.ToDouble(Console.ReadLine());
+            } catch (FormatException)
+            {
+                Console.WriteLine("Произошла ошибка при попытке считать число, установлено значение по умолчанию 0,0001");
+            }
             double result;
-
+            
             double fa = Function(a);
             double fc;
 
