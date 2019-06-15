@@ -30,7 +30,7 @@ namespace Sixth
                 Console.WriteLine("Произошла ошибка при попытке считать число");
             }
 
-            int[] a = new int[N];
+            int[] a = new int[N+3];
             a[0] = a1; a[1] = a2; a[2] = a3;
             Console.Write($"{a1} {a2} {a3}");
             bool isThereSubIcreasingArray = true;
@@ -45,8 +45,10 @@ namespace Sixth
                 if (i % 2 == 0 && a[i] > a[i - 2])
                     isThereSubIcreasingArray = false;
             }
-
-
+            if (!isThereSubIcreasingArray)
+                Console.WriteLine("Четные элементы представляют собой возрастающую подпоследовательность");
+            else
+                Console.WriteLine("Четные элементы не представляют собой возрастающую подпоследовательность");
         }
     }
 }
