@@ -6,7 +6,6 @@ namespace Tenth
     /// </summary>
     public class Tree
     {
-        #region Модель
         /// <summary>
         /// Информационное поле
         /// </summary>
@@ -46,8 +45,6 @@ namespace Tenth
         {
             return Data + " ";
         }
-        #endregion
-        #region Представление
         /// <summary>
         /// Выводит на экран бинарное дерево
         /// </summary>
@@ -63,8 +60,6 @@ namespace Tenth
                 ShowTree(p.Right, l + 3);//переход к правому поддереву
             }
         }
-        #endregion
-        #region Контроллер
         /// <summary>
         /// Создает узел дерева с указанным информационным полем
         /// </summary>
@@ -163,6 +158,5 @@ namespace Tenth
             p = r;
             return p;
         }
-        #endregion
     }
 }

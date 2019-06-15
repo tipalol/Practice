@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{3B84EFD6-4198-4476-AD63-701C8DB7298E}</ProjectGuid>
+    <ProjectGuid>{98FCCD72-7D7A-4F09-B9D1-DEC24D3150C4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>tenth</RootNamespace>
-    <AssemblyName>tenth</AssemblyName>
+    <RootNamespace>Twelve</RootNamespace>
+    <AssemblyName>Twelve</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,7 +34,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tree.cs" />
     <Compile Include="Menu.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
