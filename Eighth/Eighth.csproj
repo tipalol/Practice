@@ -34,6 +34,13 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Matrice.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eleven\Eleven.csproj">
+      <Project>{F7753E0B-94AC-4766-A19E-EC0FA57FE5C0}</Project>
+      <Name>Eleven</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
