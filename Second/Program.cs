@@ -5,58 +5,58 @@ namespace Second
 {
     class MainClass
     {
-        static int c(string s)
+        static int getInt(string s)
         {
             return Convert.ToInt32(s);
         }
         public static void Main()
         {
-            var r = new StreamReader("INPUT.TXT");
-            var w = new StreamWriter("OUTPUT.TXT");
-            var ms = new int[] { 0, 31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-            var inp = r.ReadLine().Split(' ');
-            int bd = c(inp[0]);
-            int bm = c(inp[1].Trim('0'));
-            inp = r.ReadLine().Split(' ');
-            r.Close();
-            int d = c(inp[0]);
-            int m = c(inp[1].Trim('0'));
-            int y = c(inp[2]);
-            int ds = 0;
-            while (!(d == bd && m == bm))
+            var reader = new StreamReader("INPUT.TXT");
+            var writer = new StreamWriter("OUTPUT.TXT");
+            var daysInMonths = new int[] { 0, 31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            var input = reader.ReadLine().Split(' ');
+            int bday = getInt(input[0]);
+            int bmonth = getInt(input[1].Trim('0'));
+            input = reader.ReadLine().Split(' ');
+            reader.Close();
+            int day = getInt(input[0]);
+            int month = getInt(input[1].Trim('0'));
+            int year = getInt(input[2]);
+            int estimatedDays = 0;
+            while (!(day == bday && month == bmonth))
             {
                 int df;
-                if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)
+                if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
                     df = 29;
                 else
                     df = 28;
                 int dm = 0;
-                if (m == 2)
+                if (month == 2)
 
                     dm = df;
                 else
 
-                    dm = ms[m];
+                    dm = daysInMonths[month];
 
-                if (d == 31 && m == 12)
+                if (day == 31 && month == 12)
                 {
-                    d = 1;
-                    m = 1;
-                    y++;
+                    day = 1;
+                    month = 1;
+                    year++;
                 }
-                else if (d == dm)
+                else if (day == dm)
                 {
-                    d = 1;
-                    m++;
+                    day = 1;
+                    month++;
                 }
                 else
 
-                    d++;
+                    day++;
 
-                ds++;
+                estimatedDays++;
             }
-            w.Write(ds);
-            w.Close();
+            writer.Write(estimatedDays);
+            writer.Close();
         }
     }
 }
