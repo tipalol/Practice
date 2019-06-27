@@ -7,13 +7,21 @@ class MainClass
     static void Main(string[] args)
     {
         Console.WriteLine("Введите N");
-        int n = Convert.ToInt32(Console.ReadLine());
-        var S = new string[n];
-        for (int i = 0; i < n; i++) S[i] = i.ToString();
-        Console.WriteLine("Введите K");
-        int k = Convert.ToInt32(Console.ReadLine());
+        int n = 0; int k = 0;
+        try
+        {
+            n = Convert.ToInt32(Console.ReadLine());
+            var S = new string[n];
+            for (int i = 0; i < n; i++) S[i] = i.ToString();
+            Console.WriteLine("Введите K");
+            k = Convert.ToInt32(Console.ReadLine());
+            Permute.SubsetSelection(S, k, false);
+        } catch (Exception)
+        {
+            Console.WriteLine("Произошла ошибка при попытке считать число");
+        }
 
-        Permute.SubsetSelection(S, k, false);
+        
     }
 
     static class Permute

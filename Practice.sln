@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eighth", "Eighth\Eighth.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninth", "Ninth\Ninth.csproj", "{46CDE6E0-804F-42A7-912B-6116019C5DAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenth", "tenth\tenth.csproj", "{3B84EFD6-4198-4476-AD63-701C8DB7298E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tenth", "tenth\tenth.csproj", "{3B84EFD6-4198-4476-AD63-701C8DB7298E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eleven", "Eleven\Eleven.csproj", "{F7753E0B-94AC-4766-A19E-EC0FA57FE5C0}"
 EndProject

@@ -20,6 +20,7 @@ namespace Eighth
                 }
             Matrice a = new Matrice(a_);
             Matrice b = new Matrice(b_);
+            b.interchange(1, 2);
 
             Matrice c = b;
 
@@ -32,7 +33,7 @@ namespace Eighth
 
             Console.Write("Первая матрица изоморфна ко второй: ");
             Console.WriteLine(Matrice.isIsomorph(a, b));
-            Console.Write("Первая матрица изоморфна к третьей: ");
+            Console.Write("Вторая матрица изоморфна к третьей: ");
             Console.WriteLine(Matrice.isIsomorph(b, c));
 
         }

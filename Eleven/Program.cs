@@ -7,6 +7,7 @@ namespace Eleven
         public static void Main(string[] args)
         {
             Encryption encryption = new Encryption();
+            Console.WriteLine("Принимаются английские буквы!");
             string[] menuElements = {
                 "Зашифровать текст",
                 "Расшифровать текст"

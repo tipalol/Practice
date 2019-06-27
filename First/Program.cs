@@ -7,21 +7,31 @@ namespace First
     {
         public static void Main()
         {
-            var input = new StreamReader("INPUT.TXT");
-            string temp = input.ReadLine();
-            int n = Convert.ToInt32(temp.Split(' ')[0]);
-            int m = Convert.ToInt32(temp.Split(' ')[1]);
-            int[,] a = new int[n, m];
-
-            for (int i = 0; i < n; i++)
+            int n = 0;
+            int m = 0;
+            int[,] a = new int[0,0];
+            try
             {
-                temp = input.ReadLine();
-                for (int j = 0; j < m; j++)
+                var input = new StreamReader("INPUT.TXT");
+                string temp = input.ReadLine();
+                n = Convert.ToInt32(temp.Split(' ')[0]);
+                m = Convert.ToInt32(temp.Split(' ')[1]);
+                a = new int[n, m];
+
+                for (int i = 0; i < n; i++)
                 {
-                    a[i, j] = Convert.ToInt32( temp.Split(' ')[j] );
+                    temp = input.ReadLine();
+                    for (int j = 0; j < m; j++)
+                    {
+                        a[i, j] = Convert.ToInt32( temp.Split(' ')[j] );
+                    }
                 }
+                input.Close();
             }
-            input.Close();
+            catch (Exception)
+            {
+                Console.WriteLine("Ошибка при считывании данных с файла");
+            }
 
             int[,] b = new int[n, m];
             for (int i = 0; i < n; i++)
@@ -34,11 +44,16 @@ namespace First
 
             var output = new StreamWriter("OUTPUT.TXT");
             output.WriteLine(b[n-1,m-1]);
+            Console.WriteLine(b[n - 1, m - 1]);
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
-                    output.Write($"{b[i,j]} ");
+                {
+                    output.Write($"{b[i, j]} ");
+                    Console.Write($"{b[i, j]} ");
+                }
                 output.WriteLine();
+                Console.WriteLine();
             }
             output.Close();
         }

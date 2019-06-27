@@ -23,6 +23,8 @@ namespace Second
             int month = getInt(input[1].Trim('0'));
             int year = getInt(input[2]);
             int estimatedDays = 0;
+            Console.WriteLine($"На вход получено: Год: {year}, Месяц: {month}, день: {day}");
+            Console.WriteLine($"День рождения: Месяц: {bmonth}, День: {bday}");
             while (!(day == bday && month == bmonth))
             {
                 int df;
@@ -56,6 +58,7 @@ namespace Second
                 estimatedDays++;
             }
             writer.Write(estimatedDays);
+            Console.WriteLine($"Дней до дня рождения: {estimatedDays}");
             writer.Close();
         }
     }

@@ -26,7 +26,7 @@ namespace Sixth
                 a3 = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Введите N");
                 N = Convert.ToInt32(Console.ReadLine());
-            } catch (FormatException)
+            } catch (Exception)
             {
                 Console.WriteLine("Произошла ошибка при попытке считать число");
             }

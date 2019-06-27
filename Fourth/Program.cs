@@ -18,7 +18,7 @@ namespace Fourth
             try
             {
                 epsilon = Convert.ToDouble(Console.ReadLine());
-            } catch (FormatException)
+            } catch (Exception)
             {
                 Console.WriteLine("Произошла ошибка при попытке считать число, установлено значение по умолчанию 0,0001");
             }

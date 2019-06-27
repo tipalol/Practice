@@ -126,7 +126,7 @@ namespace Twelve
                 {
                     case 1:
                         int[] tmpCount = CountSort(first);
-                        Console.WriteLine("Отсортированный упорядочненный по возврастанию массив:");
+                        Console.WriteLine("Отсортированный упорядочненный по возрастанию массив:");
                         foreach (int element in tmpCount)
                             Console.Write($"{element} ");
                         Console.WriteLine();
